@@ -251,7 +251,7 @@
                        dataTaskWithRequest:request
                        uploadProgress:nil
                        downloadProgress:nil
-                       completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+                       completionHandler:^(NSURLResponse * _Nonnull response, NSData * _Nullable responseData, id  _Nullable responseObject, NSError * _Nullable error) {
                            dispatch_async(self.responseQueue, ^{
                                __strong __typeof__(weakSelf) strongSelf = weakSelf;
                                AFImageDownloaderMergedTask *mergedTask = [strongSelf safelyGetMergedTask:URLIdentifier];
